@@ -17,7 +17,7 @@ public class PersonaService implements IPersonaService {
     
     
     /** inyeccion de dependencias*/
-    @Autowired PersonaRepository persoRepo;
+    @Autowired public PersonaRepository persoRepo;
 
     @Override
     public List<Persona> verPersonas() {
