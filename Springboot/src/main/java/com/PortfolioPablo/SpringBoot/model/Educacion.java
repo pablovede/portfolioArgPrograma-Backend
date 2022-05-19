@@ -21,17 +21,20 @@ public class Educacion {
     private Long id;
     private String establecimiento;
     private String titulo;
-    private Date fecha;
+    private Date desde;
+    private String hasta;
     private String logo;
     
     public Educacion () {}
 
-    public Educacion(Long id, String establecimiento, String titulo, Date fecha, String logo) {
+    public Educacion(Long id, String establecimiento, String titulo, Date desde, String hasta, String logo) {
         this.id = id;
         this.establecimiento = establecimiento;
         this.titulo = titulo;
-        this.fecha = fecha;
+        this.desde = desde;
+        this.hasta = hasta;
         this.logo = logo;
+        
     }
     
     

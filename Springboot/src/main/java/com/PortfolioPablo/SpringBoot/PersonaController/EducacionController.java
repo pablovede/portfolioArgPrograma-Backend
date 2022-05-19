@@ -46,15 +46,17 @@ public class EducacionController {
     public Educacion editEducacion (@PathVariable Long id,
                                     @RequestParam ("establecimiento") String nuevoEstablecimiento,
                                     @RequestParam ("titulo") String nuevoTitulo,
-                                    @RequestParam ("fecha") Date nuevoFecha,
+                                    @RequestParam ("desde") Date nuevoDesde,
+                                    @RequestParam ("hasta") String nuevoHasta,
                                     @RequestParam ("logo") String nuevoLogo) {
         
         Educacion educacion = eduServ.buscarEducacion(id);
         
         educacion.setEstablecimiento(nuevoEstablecimiento);
         educacion.setTitulo(nuevoTitulo);
-        educacion.setFecha(nuevoFecha);
+        educacion.setDesde(nuevoDesde);
         educacion.setLogo(nuevoLogo);
+        educacion.setHasta(nuevoHasta);
         
         eduServ.crearEducacion(educacion);
         return educacion;
