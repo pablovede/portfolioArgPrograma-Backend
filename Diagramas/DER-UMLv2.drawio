@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T22:33:59.698Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="SwLIZ6yqLmVNg8vITqN6" version="18.0.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-05-19T20:36:42.093Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="jWGdMO6j0VrgV-fHKjb8" version="18.0.7" type="github" pages="2">
   <diagram id="QpSm8B5l4Wpi0U74M7_F" name="DER">
-    <mxGraphModel dx="1597" dy="862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -196,7 +196,7 @@
         <mxCell id="lIModVLrYndjuk8-XewW-14" value="Proyectos" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;swimlaneFillColor=default;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=0;glass=0;swimlaneLine=0;labelBorderColor=none;" parent="1" vertex="1">
           <mxGeometry x="1270" y="560" width="160" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="lIModVLrYndjuk8-XewW-15" value="PK  id: int&#xa;FK id_Persona: int&#xa;Nombre: varchar&#xa;Fecha: date&#xa;Descripcion: varchar" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="lIModVLrYndjuk8-XewW-14" vertex="1">
+        <mxCell id="lIModVLrYndjuk8-XewW-15" value="PK  id: int&#xa;FK id_Persona: int&#xa;Nombre: varchar&#xa;Fecha: date&#xa;Descripcion: varchar&#xa;Link: varchar" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="lIModVLrYndjuk8-XewW-14" vertex="1">
           <mxGeometry y="30" width="160" height="140" as="geometry" />
         </mxCell>
         <mxCell id="lIModVLrYndjuk8-XewW-21" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="lIModVLrYndjuk8-XewW-2" target="lIModVLrYndjuk8-XewW-6" edge="1">
@@ -284,7 +284,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8BGMtuXX3aosdN9lxjDp" name="UML">
-    <mxGraphModel dx="-789" dy="467" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="-616" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
