@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.PortfolioPablo.SpringBoot.model;
 
 import java.util.Date;
@@ -21,7 +18,7 @@ public class Experiencia {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Long id;
     private String cargo;
-    private String empresa;
+    private String lugar;
     private Date desde;
     private Date hasta;
     private String descripcion;
@@ -31,7 +28,7 @@ public class Experiencia {
      public Experiencia (Long id, String cargo, String empresa, Date desde, Date hasta, String descripcion) {
             this.cargo = cargo;
             this.descripcion = descripcion;
-            this.empresa = empresa;
+            this.lugar = empresa;
             this.desde = desde;
             this.hasta = hasta;
             

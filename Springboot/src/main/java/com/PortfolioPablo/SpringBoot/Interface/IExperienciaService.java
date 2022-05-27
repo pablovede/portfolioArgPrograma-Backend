@@ -10,8 +10,9 @@ public interface IExperienciaService {
     //traer una lista de experiencias
     public List <Experiencia> verExperiencias ();
     //guardar un objeto del tipo experiencia
-    public void crearExperiencia (Experiencia exp);
+    public Experiencia crearExperiencia (Experiencia exp);
     public void borrarExperiencia (Long id);
     public Experiencia buscarExperiencia (Long id);
+    public Experiencia editarExperiencia(Experiencia exp);
     
 }

@@ -1,11 +1,13 @@
 
-package com.PortfolioPablo.SpringBoot.PersonaController;
+package com.PortfolioPablo.SpringBoot.Controller;
 
 import com.PortfolioPablo.SpringBoot.Interface.IExperienciaService;
 import com.PortfolioPablo.SpringBoot.model.Experiencia;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,42 +26,32 @@ public class ExperienciaController {
      @Autowired private IExperienciaService expServ;
      
      
-     @PostMapping ("/experiencia/new")
-        public String agregarExperiencia (@RequestBody Experiencia exp) {
-            expServ.crearExperiencia(exp);
-            return "La experiencia fue creada correctamente";
+      @PostMapping ("/experiencia/new")
+        public ResponseEntity<Experiencia> agregarExperiencia (@RequestBody Experiencia exp) {
+        Experiencia newExp = expServ.crearExperiencia(exp);
+            return new  ResponseEntity<>(newExp, HttpStatus.CREATED);
         }
         
         @GetMapping ("/experiencia/ver")
         @ResponseBody
         public List<Experiencia> verExperiencias () {
             return expServ.verExperiencias();
-            //return listaPersonas;
-        }
-        @DeleteMapping ("/experiencia/borrar/{id}")
-        public String borrarExperiencia (@PathVariable Long id) {
-            expServ.borrarExperiencia(id);
-            return "La experiencia fue eliminada correctamente";
+            
         }
         
-        @PutMapping ("/experiencia/editar/{id}")
-        public Experiencia editExperiencia (@PathVariable Long id,
-                                            @RequestParam("cargo") String nuevoCargo,
-                                            @RequestParam("empresa") String nuevoEmpresa,
-                                            @RequestParam("desde") Date nuevoDesde,
-                                            @RequestParam("hasta") Date nuevoHasta,
-                                            @RequestParam("descripcion") String nuevoDescripcion) {
-            Experiencia experiencia = expServ.buscarExperiencia(id);
-            
-            experiencia.setCargo(nuevoCargo);
-            experiencia.setEmpresa(nuevoEmpresa);
-            experiencia.setDesde(nuevoDesde);
-            experiencia.setHasta(nuevoHasta);
-            experiencia.setDescripcion(nuevoDescripcion);
-            
-            expServ.crearExperiencia(experiencia);
-            return experiencia;
+        @DeleteMapping ("/experiencia/borrar/{id}")
+        public ResponseEntity<?> borrarExperiencia (@PathVariable("id") Long id) {
+            expServ.borrarExperiencia(id);
+            return  new ResponseEntity<>(HttpStatus.OK);
         }
+        
+         @PutMapping ("/experiencia/editar")
+    public ResponseEntity<Experiencia> editarExperiencia(@RequestBody Experiencia exp){
+        Experiencia editarExperiencia = expServ.editarExperiencia(exp);
+        return new ResponseEntity<>(editarExperiencia, HttpStatus.OK);
+        
+   
+    }
         
         //me trae los datos solo de la persona que tenga id=1
         @GetMapping ("/experiencia/ver/perfil")

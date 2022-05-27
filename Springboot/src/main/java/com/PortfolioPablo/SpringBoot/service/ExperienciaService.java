@@ -22,8 +22,9 @@ public class ExperienciaService implements IExperienciaService {
     }
 
     @Override
-    public void crearExperiencia(Experiencia exp) {
+    public Experiencia crearExperiencia(Experiencia exp) {
         expRepo.save(exp);
+        return exp;
        
     }
 
@@ -35,6 +36,10 @@ public class ExperienciaService implements IExperienciaService {
     @Override
     public Experiencia buscarExperiencia(Long id) {
      return expRepo.findById(id).orElse(null);
+    }
+    
+    public Experiencia editarExperiencia(Experiencia exp) {
+        return expRepo.save(exp);
     }
     
 }
