@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin (origins = "https://portfolio-argentina-prog-2eb89.web.app/")
 
 public class EducacionController {
     

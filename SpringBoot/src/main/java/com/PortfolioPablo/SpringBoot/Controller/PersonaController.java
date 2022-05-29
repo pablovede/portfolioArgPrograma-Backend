@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 /** implemento todos los metodos del CRUD*/
 
 @RestController
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin (origins = "https://portfolio-argentina-prog-2eb89.web.app/")
 
 public class PersonaController {
     
